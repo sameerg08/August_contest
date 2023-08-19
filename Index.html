@@ -5,131 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            background-color: black;
-        }
-        body{
-            padding-left: 10px;
-        }
-        h1{
-            font-weight: 100;
-        }
-        table {
-            border-collapse: collapse;
-            text-align: center;
-            padding: 20px 20px 20px 0px; 
-            margin: 21px 21px 21px 0px;
-        }
-        #form{
-            /* padding: 10px; */
-            
-        }
-        #form input{
-            background-color: black;
-            border: 1px solid white;
-            margin: 10px 10px 10px 0px;
-            height: 14px;
-            width: 450px;
-            /* line-height: ; */
-        }
-        #form button{
-            background-color: white;
-            width: 542px;
-            height: 37px;
-             margin: 10px 10px 10px 0px; 
-        }
-        #form input{
-            padding:  15px 15px 15px 0px;
-        }
-        table td,
-        table th {
-            color: white;
-            font-weight: 100;
-            border: solid 1px white;
-            padding: 5px 5px 30px 30px; 
-        }
-        #search input{
-            height: 10px;
-            width: 100%;
-            display: inline;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <h1 style="color: white;">Student Management Crud</h1>
+    <h1 style="color: white;">Student Management CRUD</h1>
     <!-- <form > -->
-        <div id="form">
-                <input type="text" id="name" placeholder="Name">
-                <input type="email" id="email" placeholder="Email">
-                <input type="number" id="gpa" placeholder="GPA">
-                <input type="number" id="age" placeholder="Age">
-                <input type="text" id="degree" placeholder="Degree">
-        </div>
-        <div id="form">
-            <button  id="btn" onclick="addStudentDetails()">Add Student</button>
-        </div>
-        <div id="search">
-            <input type="search" placeholder="Search by Name, email or degree">
-        </div>
-    <!-- </form> -->
+    <div id="form">
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="number" id="gpa" placeholder="GPA">
+        <input type="number" id="age" placeholder="Age">
+        <input type="text" id="degree" placeholder="Degree">
+    </div>
+    <div id="form">
+        <button id="btn" onclick="addStudentDetails()">Add Student</button>
+    </div>
+    <div id="searchntable">
+        <input type="search" placeholder="Search by Name, email or degree">
+    
     <table id="table">
-        <!-- <thead> -->
-            <tr>
-                <th>ID</th>
-                <th>Student Name</th>
-                <th>Email</th>
-                <th>Age</th>
-                <th>GPA</th>
-                <th>Degree</th>
-            </tr>
-        <!-- </thead> -->
-        <!-- <tbody></tbody> -->
+        <tr>
+            <th>ID</th>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>GPA</th>
+            <th>Degree</th>
+        </tr>
     </table>
-<script>
-    // const formEl = document.querySelector("form");
-    // const tbodyEl = document.querySelector("tbody");
-    // var btn = document.getElementById("btn");
-    // btn.addEventListener("click" , addStudentDetails)
-    var id=0;
-    function addStudentDetails(){
-
-        var table = document.getElementById("table");
-        var row = table.insertRow(table.length);
-        var cell0 = row.insertCell(0);
-        var cell1 = row.insertCell(1);
-        var cell2 = row.insertCell(2);
-        var cell3 = row.insertCell(3);
-        var cell4 = row.insertCell(4);
-        var cell5 = row.insertCell(5);
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var gpa = document.getElementById("gpa").value;
-        var age = document.getElementById("age").value;
-        var degree = document.getElementById("degree").value;
-
-        
-        cell0.innerHTML=id++;
-        cell1.innerHTML = name;
-        cell2.innerHTML = email;
-        cell3.innerHTML = gpa;
-        cell4.innerHTML = age;
-        cell5.innerHTML = degree;
-
-        // row++;
-        // tbodyEl.innerHTML += 
-        //     <tr>
-        //         <td>${name}</td>
-        //         <td>${email}</td>
-        //         <td>${gpa}</td>
-        //         <td>${age}</td>
-        //         <td>${degree}</td>
-        //         <td> <button class="deletebtn">Delete</button></td>
-        //     </tr>  ;
-    }
-    // formEl.addEventListener("Add Student" ,addStudentDetails );
-</script>
-</body>
+</div>
+<script src="index.js"></script>
+    </body>
 
 </html>
